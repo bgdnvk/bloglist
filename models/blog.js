@@ -6,6 +6,7 @@ const blogSchema = new mongoose.Schema({
   url: String,
   likes: Number
 })
+
 blogSchema.set('toJSON', {
     transform: (document, returnedObject) => {
       returnedObject.id = returnedObject._id.toString()
@@ -15,4 +16,4 @@ blogSchema.set('toJSON', {
   })
   
   
-  module.exports = mongoose.model('Person', blogSchema) 
+  module.exports = mongoose.model('Blog', blogSchema) 
